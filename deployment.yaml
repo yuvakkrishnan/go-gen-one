@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-gen-one
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: go-gen-one
+  template:
+    metadata:
+      labels:
+        app: go-gen-one
+    spec:
+      containers:
+      - name: myapp
+        image: us-central1-docker.pkg.dev/yuvak-space/go-gen-repo/myapp:latest
+        ports:
+        - containerPort: 8080
