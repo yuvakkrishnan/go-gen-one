@@ -2,16 +2,18 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+
+	"github.com/dgrijalva/jwt-go"
+	"github.com/go-resty/resty/v2"
 	"github.com/google/uuid"
+	"github.com/gorilla/mux"
+	"github.com/joho/godotenv"
+	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/gorilla/mux"
-	"github.com/go-resty/resty/v2"
-	"github.com/joho/godotenv"
-	"github.com/dgrijalva/jwt-go"
 	"golang.org/x/crypto/bcrypt"
-	"github.com/pkg/errors"
 )
 
 func main() {
