@@ -13,7 +13,7 @@ spec:
         app: go-gen-one
     spec:
       containers:
-      - name: myapp
-        image: us-central1-docker.pkg.dev/yuvak-space/go-gen-repo/myapp:latest
+      - name: go-gen-one
+        image: us-central1-docker.pkg.dev/yuvak-space/go-gen-repo/go-gen-one:latest
         ports:
         - containerPort: 8080
